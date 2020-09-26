@@ -2,3 +2,5 @@
 *.pyc
 *.json
 pythonenv3.8/
+__pycache__/
+.vscode/
