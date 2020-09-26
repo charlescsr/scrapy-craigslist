@@ -1,3 +1,4 @@
 # Created by .gitignore support plugin (hsz.mobi)
 *.pyc
 *.json
+pythonenv3.8/

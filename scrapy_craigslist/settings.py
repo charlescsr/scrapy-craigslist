@@ -28,4 +28,4 @@ FEED_URI = "output.csv"
 USER_AGENT = "Mozilla/5.0 (Windows NT 5.1; rv:12.2.1) Gecko/20120616 Firefox/12.2.1 PaleMoon/12.2.1"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'scrapy_craigslist (+http://www.yourdomain.com)'
+USER_AGENT = 'scrapy_craigslist (+https://csr-site.herokuapp.com/)'

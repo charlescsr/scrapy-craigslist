@@ -21,8 +21,8 @@ class MySpider(CrawlSpider):
 
     """
     name = 'craigslist'
-    allowed_domains = ['sfbay.craigslist.org']
-    start_urls = ['https://sfbay.craigslist.org/search/apa?']
+    allowed_domains = ['chennai.craigslist.org']
+    start_urls = ['https://chennai.craigslist.org/search/apa?']
 
     # rules = (
     #     # Scrape all pages of results, not just the first page.
@@ -37,7 +37,7 @@ class MySpider(CrawlSpider):
 
     rules = (
         Rule(LxmlLinkExtractor(
-            allow=(r'sfbay.craigslist.org/search/apa.*'),
+            allow=(r'chennai.craigslist.org/search/apa.*'),
             # allow=(r'.*/search/apa\?s\=\d+.*'),
             deny = (r'.*format\=rss.*')
         ),
@@ -67,7 +67,7 @@ class MySpider(CrawlSpider):
             item = ScrapyCraigslistItem()
             item ["title"] = content.xpath("//p/span/span/a/span/text()").extract()[0]
             k = content.xpath("//p/a/@href").extract()[0]
-            item ['ad_url'] = 'https://sfbay.craigslist.org{}'.format(''.join(k))
+            item ['ad_url'] = 'https://chennai.craigslist.org{}'.format(''.join(k))
             item ["post_date"] = content.xpath("//p/span/span/time/text()").extract()[0]
             item ["post_date_specific"] = content.xpath("//p/span/span/time/@datetime").extract()[0]
             item ["price"] = content.xpath("//p/span/span[@class='l2']/span/text()").extract()[0]
